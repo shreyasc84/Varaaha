@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARAAHA CONSTRUCTIONS AND LABOUR SUPPLY</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        * {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), 
+                            url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .custom-button {
+            background-color: #FFD700;
+            color: #003366;
+            transition: all 0.3s ease;
+        }
+        .custom-button:hover {
+            background-color: #003366;
+            color: #FFD700;
+        }
+        
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-[#003366]">VARAAHA</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-[#003366] hover:text-[#FFD700]">Home</a>
+                    <a href="#about" class="text-[#003366] hover:text-[#FFD700]">About</a>
+                    <a href="#services" class="text-[#003366] hover:text-[#FFD700]">Services</a>
+                    <a href="#contact" class="text-[#003366] hover:text-[#FFD700]">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed top-16 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-[#003366] hover:text-[#FFD700]">Home</a>
+                <a href="#about" class="text-[#003366] hover:text-[#FFD700]">About</a>
+                <a href="#services" class="text-[#003366] hover:text-[#FFD700]">Services</a>
+                <a href="#contact" class="text-[#003366] hover:text-[#FFD700]">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center justify-center text-white px-4">
+        <div class="text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Your Trusted Construction Partner</h1>
+            <p class="text-xl md:text-2xl mb-8">High-quality construction solutions with efficiency and affordability.</p>
+            <a href="#contact" class="custom-button px-8 py-3 rounded-full text-lg font-semibold">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-[#003366] mb-8">About Us</h2>
+            <p class="text-lg text-gray-700 text-center">
+                VARAAHA CONSTRUCTIONS AND LABOUR SUPPLY is a contracting company offering complete construction solutions. We specialize in high-quality work with efficiency, reliability, and affordability. From construction labor to full-scale interior and material contracts, we handle everything to bring your vision to life.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-[#003366] mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service cards will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-[#003366] mb-12">Why Choose Us?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
+                    <i class="bi bi-people-fill text-4xl text-[#FFD700] mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Experienced Workforce</h3>
+                    <p>Skilled professionals ensuring top-quality work.</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
+                    <i class="bi bi-currency-dollar text-4xl text-[#FFD700] mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Affordable Pricing</h3>
+                    <p>Competitive rates without compromising standards.</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
+                    <i class="bi bi-clock-fill text-4xl text-[#FFD700] mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">On-Time Delivery</h3>
+                    <p>We prioritize timely completion of projects.</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
+                    <i class="bi bi-heart-fill text-4xl text-[#FFD700] mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Customer Satisfaction</h3>
+                    <p>Your vision, our commitment!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold text-center text-[#003366] mb-12">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+                    <p class="mb-4"><i class="bi bi-geo-alt-fill mr-2"></i>Bengaluru</p>
+                    <div class="space-y-2 mb-4">
+                        <p><i class="bi bi-telephone-fill mr-2"></i>Guru B.: <a href="tel:6360896592" class="text-blue-600">6360896592</a></p>
+                        <p><i class="bi bi-telephone-fill mr-2"></i>Manjesh R.: <a href="tel:9620514749" class="text-blue-600">9620514749</a></p>
+                        <p><i class="bi bi-telephone-fill mr-2"></i>Sri H Balaji: <a href="tel:7338631592" class="text-blue-600">7338631592</a></p>
+                    </div>
+                    <p><i class="bi bi-envelope-fill mr-2"></i><a href="mailto:varaahaconstructionsandlabours@gmail.com" class="text-blue-600">varaahaconstructionsandlabours@gmail.com</a></p>
+                </div>
+                <form id="contactForm" class="space-y-4" action="https://formspree.io/f/mldjwnvg" method="POST">
+                    <input type="text" name="name" placeholder="Name" class="w-full p-3 border rounded" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-3 border rounded" required>
+                    <input type="email" name="email" placeholder="Email" class="w-full p-3 border rounded" required>
+                    <input type="hidden" name="_replyto" value="" />
+                    <textarea placeholder="Message" name="message" class="w-full p-3 border rounded h-32" required></textarea>
+                    <button type="submit" class="custom-button px-8 py-3 rounded-full w-full">Send Message</button>
+                </form>
+
+                <div id="successMessage" class="hidden bg-green-100 text-green-700 p-4 rounded mt-4">
+                    ✅ Thank you! Your message has been sent successfully.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#003366] text-black py-8 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-4">
+                <div class="flex justify-center space-x-4 mb-4">
+                    <a href="#" class="hover:text-[#FFD700]"><i class="bi bi-facebook text-2xl"></i></a>
+                    <a href="#" class="hover:text-[#FFD700]"><i class="bi bi-instagram text-2xl"></i></a>
+                    <a href="#" class="hover:text-[#FFD700]"><i class="bi bi-linkedin text-2xl"></i></a>
+                </div>
+                <p>© 2025 VARAAHA CONSTRUCTIONS AND LABOUR SUPPLY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Services data
+        const services = [
+            { icon: 'bi-people', title: 'Labour Supply Contracts', description: 'Skilled and unskilled workers for all types of projects.' },
+            { icon: 'bi-building', title: 'Material Contract', description: 'Supplying quality construction materials at competitive prices.' },
+            { icon: 'bi-clipboard-data', title: 'Planning & Estimation', description: 'Professional project planning, budgeting, and cost estimation.' },
+            { icon: 'bi-house-heart', title: 'Interior Design & Décor', description: 'Stylish, functional, and customized interior solutions.' },
+            { icon: 'bi-grid-3x3', title: 'Tile Work & Flooring', description: 'Professional tile installation for residential and commercial spaces.' },
+            { icon: 'bi-layers', title: 'False Ceiling & Interior Works', description: 'Modern ceiling solutions and elegant interiors.' },
+            { icon: 'bi-droplet', title: 'Plumbing & Sanitary Works', description: 'Expert plumbing installation, repair, and maintenance.' },
+            { icon: 'bi-bricks', title: 'Masonry & Brickwork', description: 'Strong, durable, and aesthetically designed masonry structures.' },
+            { icon: 'bi-lightning', title: 'Electrical Works', description: 'Safe and efficient electrical wiring, installation, and maintenance.' },
+            { icon: 'bi-brush', title: 'Painting & Finishing', description: 'High-quality painting services for a polished look.' },
+            { icon: 'bi-tools', title: 'Renovation & Remodeling', description: 'Transforming spaces with expert renovation solutions.' }
+        ];
+
+        // Generate service cards
+        const servicesContainer = document.querySelector('#services .grid');
+        services.forEach(service => {
+            const card = document.createElement('div');
+            card.className = 'service-card p-6 bg-white rounded-lg shadow-lg text-center';
+            card.innerHTML = `
+                <i class="bi ${service.icon} text-4xl text-[#FFD700] mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">${service.title}</h3>
+                <p class="text-gray-600">${service.description}</p>
+            `;
+            servicesContainer.appendChild(card);
+        });
+
+        
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        //form handling
+        document.getElementById('contactForm').addEventListener('submit', function (e) {e.preventDefault(); // Prevent the form from redirecting
+
+            const formData = new FormData(this);
+
+            fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                Accept: 'application/json',
+            },
+            })
+            .then((response) => {
+                if (response.ok) {
+                // Hide the form after submission
+                document.getElementById('contactForm').style.display = 'none';
+                // Show the success message
+                document.getElementById('successMessage').classList.remove('hidden');
+                } else {
+                alert('Oops! There was a problem sending your message. Please try again.');
+                }
+            })
+            .catch((error) => {
+                alert('Error! Please try again later.');
+            });
+        });
+    </script>
+</body>
+</html>
